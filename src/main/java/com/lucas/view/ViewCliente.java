@@ -628,7 +628,7 @@ public class ViewCliente extends javax.swing.JInternalFrame {
             ftfCpf.requestFocus();
             return false;
         }
-        if (validaEmail(txtEmail.getText().trim())==false) {
+        if (emailValidate(txtEmail.getText().trim())==false) {
             JOptionPane.showMessageDialog(this, "Email inválido.", "Alerta", JOptionPane.WARNING_MESSAGE);
             ftfCpf.requestFocus();
             return false;
@@ -636,12 +636,11 @@ public class ViewCliente extends javax.swing.JInternalFrame {
         return true;
     }
     
-    private boolean validaEmail(String email){
+    private boolean emailValidate(String email){
         String regex = "^[\\w-]+(\\.[\\w-]+)*@([\\w-]+\\.)+[a-zA-Z]{2,3}$";
-        Pattern pattern = Pattern.compile(regex); 
-        String source = email;
-        Matcher matcher = pattern.matcher(source); 
-        if (!matcher.find()){ 		    
+        Pattern p = Pattern.compile(regex); 
+        Matcher mat = p.matcher(email); 
+        if(!mat.find()){ 		    
             return false;
         }
         return true;

@@ -2,7 +2,6 @@ package com.lucas.view;
 
 import com.lucas.model.Cliente;
 import com.lucas.reports.ClienteRelatorio;
-
 /**
  * 
  *
@@ -64,7 +63,7 @@ public class ViewRelatorioCliente extends javax.swing.JInternalFrame {
             }
         });
 
-        btnConsultar.setText("Consultar");
+        btnConsultar.setText("Gerar Relatório");
         btnConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConsultarActionPerformed(evt);
@@ -78,12 +77,12 @@ public class ViewRelatorioCliente extends javax.swing.JInternalFrame {
             .addGroup(pnFormLayout.createSequentialGroup()
                 .addComponent(lbCliente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ftfCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addComponent(btCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ftfCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(btnConsultar)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addGap(28, 28, 28))
         );
         pnFormLayout.setVerticalGroup(
             pnFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

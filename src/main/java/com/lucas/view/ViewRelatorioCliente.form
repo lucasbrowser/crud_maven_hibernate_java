@@ -119,12 +119,12 @@
                       <Group type="102" attributes="0">
                           <Component id="lbCliente" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="ftfCliente" min="-2" pref="215" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                          <Component id="btCliente" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="ftfCliente" min="-2" pref="233" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btCliente" min="-2" pref="44" max="-2" attributes="0"/>
+                          <EmptySpace pref="36" max="32767" attributes="0"/>
                           <Component id="btnConsultar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="84" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -181,7 +181,7 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="btnConsultar">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Consultar"/>
+                    <Property name="text" type="java.lang.String" value="Gerar Relat&#xf3;rio"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnConsultarActionPerformed"/>
