@@ -2,25 +2,16 @@ package com.lucas.view;
 
 import com.lucas.model.Cliente;
 import com.lucas.reports.ClienteRelatorio;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
-import javax.swing.text.DefaultFormatterFactory;
-import javax.swing.text.MaskFormatter;
 
 /**
- * Janela de lançamento de venda
+ * 
  *
- * @author Juliano
+ * @author lucas
  */
 public class ViewRelatorioCliente extends javax.swing.JInternalFrame {
 
     public ViewRelatorioCliente() {
         initComponents();
-        SimpleDateFormat SDF = new SimpleDateFormat("dd/MM/yyyy");
         habilitarFormulario(false);
     }
 
@@ -123,7 +114,7 @@ public class ViewRelatorioCliente extends javax.swing.JInternalFrame {
                 .addContainerGap(292, Short.MAX_VALUE))
         );
 
-        tpConteudo.addTab("Dados da venda", pnCabecalho);
+        tpConteudo.addTab("Dados do Cliente", pnCabecalho);
 
         getContentPane().add(tpConteudo, java.awt.BorderLayout.CENTER);
 
@@ -146,7 +137,6 @@ public class ViewRelatorioCliente extends javax.swing.JInternalFrame {
 
     private void habilitarFormulario(boolean ativo) {
         ftfCliente.setEnabled(ativo);
-   
         if (!ativo) {
             limpaFormulario();
         }
@@ -156,12 +146,11 @@ public class ViewRelatorioCliente extends javax.swing.JInternalFrame {
         ftfCliente.setValue(null);
     }
 
-    
      private void imprimir(){
         Cliente cliente = (Cliente) ftfCliente.getValue();
-        long codCliente = cliente.getId();
+        long id = cliente.getId();
         ClienteRelatorio cliRel = new ClienteRelatorio();
-        cliRel.imprimeCliente2(codCliente);    
+        cliRel.imprimeCliente2(id);    
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

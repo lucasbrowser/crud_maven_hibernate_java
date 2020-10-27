@@ -10,9 +10,7 @@ com\lucas\view\ViewCliente$7.class
 com\lucas\view\ViewPrincipal$7.class
 com\lucas\util\ValidaCpfCnpj.class
 com\lucas\view\ViewPrincipal$5.class
-com\lucas\dao\DefaultDAO.class
 com\lucas\view\ViewCliente$4.class
-com\lucas\view\ViewRelatorioCliente$3.class
 com\lucas\view\ViewCliente$9.class
 com\lucas\model\Cliente_.class
 com\lucas\view\ViewPrincipal$8.class

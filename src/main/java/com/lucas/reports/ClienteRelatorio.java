@@ -6,7 +6,6 @@
 package com.lucas.reports;
 
 import com.lucas.dao.ClienteDAO;
-import com.lucas.model.Cliente;
 import java.util.List;
 import javax.swing.JOptionPane;
 import net.sf.jasperreports.engine.JRDataSource;
@@ -26,8 +25,8 @@ public class ClienteRelatorio {
     public void imprimeCliente(){
         try {
             ClienteDAO clienteDAO = new ClienteDAO(); 
-            List listaUs = clienteDAO.findCliente();
-            JRDataSource jdsource = new JRBeanCollectionDataSource(listaUs);
+            List lista = clienteDAO.findCliente();
+            JRDataSource jdsource = new JRBeanCollectionDataSource(lista);
             String path = "src/main/resources/reports/ClienteReport.jrxml";
             JasperReport report = JasperCompileManager.compileReport(path);
             JasperPrint printReport = JasperFillManager.fillReport(report, null, jdsource);
@@ -40,14 +39,14 @@ public class ClienteRelatorio {
     public void imprimeCliente2(long id){
         try {
             ClienteDAO clienteDAO = new ClienteDAO(); 
-            List listaUs = (List) clienteDAO.select(id);
-            JRDataSource jdsource = new JRBeanCollectionDataSource(listaUs);
+            List lista = clienteDAO.findClienteOne(id);
+            JRDataSource jdsource = new JRBeanCollectionDataSource(lista);
             String path = "src/main/resources/reports/ClienteReport.jrxml";
             JasperReport report = JasperCompileManager.compileReport(path);
             JasperPrint printReport = JasperFillManager.fillReport(report, null, jdsource);
             JasperViewer.viewReport(printReport, false);
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro ao visualizar o relatório "+e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
         

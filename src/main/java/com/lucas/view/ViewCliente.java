@@ -8,7 +8,6 @@ import com.lucas.model.Cliente;
 import com.lucas.reports.ClienteRelatorio;
 import com.lucas.util.ValidaCpfCnpj;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.Date;
 import java.util.logging.Level;
@@ -18,10 +17,10 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.MaskFormatter;
-import net.sf.jasperreports.engine.JRException;
+
 
 /**
- * Janela de cadastro de cliente
+ * 
  *
  * @author lucas
  */

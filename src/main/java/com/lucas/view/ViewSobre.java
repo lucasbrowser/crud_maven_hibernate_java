@@ -36,7 +36,7 @@ public class ViewSobre extends javax.swing.JInternalFrame {
         setClosable(true);
         setTitle("Sobre");
 
-        jLabel1.setText("AutoMais Oficina ");
+        jLabel1.setText("Martinello's Project");
 
         jLabel2.setText("Autor:");
 

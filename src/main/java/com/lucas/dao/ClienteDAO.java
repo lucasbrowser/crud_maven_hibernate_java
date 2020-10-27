@@ -115,6 +115,25 @@ public class ClienteDAO {
     }
     
     @SuppressWarnings("unchecked")
+    public List<Cliente> findClienteOne(long id) {
+	List<Cliente> lista = new ArrayList<Cliente>();
+        Criteria hql= null;
+	try{
+            session = factory.openSession();
+            transaction = session.beginTransaction();
+            String query = "SELECT c FROM com.lucas.model.Cliente c WHERE c.id='" +id+ "'";
+            lista = (List<Cliente>) session.createQuery(query).list();
+            transaction.commit();
+	}catch (Exception ex) {
+            transaction.rollback();
+            ex.printStackTrace();
+        }finally {
+            session.close();
+	}
+        return lista;
+    }
+    
+    @SuppressWarnings("unchecked")
     public List<Cliente> findCliente(Cliente cliente) {
 	Criteria c = session.createCriteria(Cliente.class);
         if (cliente.getNome().length() > 0) {

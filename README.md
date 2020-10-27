@@ -30,7 +30,7 @@ Com as configurações realizadas, o seu projeto está pronto para rodar.
 
 O projeto consiste em uma Tela Principal, onde há a opção de acesso a Tela de Cadastro de Clientes, nesta tela há algumas validações:
 
-O campo CPF/CPPJ contém máscaras que alternam de acordo com a escolha de Pessoa Física ou Jurídica, além disso, contém validação de CPF e CNPJ, onde só pode ser inserido CPF e CNPJ legítimos.
+O campo CPF/CNPJ contém máscaras que alternam de acordo com a escolha de Pessoa Física ou Jurídica, além disso, contém validação de CPF e CNPJ, onde só pode ser inserido CPF e CNPJ legítimos.
 
 O campo CEP utiliza API do ViaCEP, assim, basta digitar o CEP de seu endereço e clicar no botão de pesquisa, que automaticamente irá carregar os campos de Endereço, Complemento, Cidade e UF.
 

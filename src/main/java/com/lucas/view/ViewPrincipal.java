@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 /**
- * Janela menu da aplicação
+ * 
  *
  * @author lucas
  */
@@ -37,7 +37,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
         menuCadastros = new javax.swing.JMenu();
         miCliente = new javax.swing.JMenuItem();
         menuRelatorios = new javax.swing.JMenu();
-        miRelVendasCliente = new javax.swing.JMenuItem();
+        miRelCliente = new javax.swing.JMenuItem();
         menuFerramentas = new javax.swing.JMenu();
         miBlocodeNotas = new javax.swing.JMenuItem();
         menuSistema = new javax.swing.JMenu();
@@ -75,7 +75,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
         btRelatorioVenda.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btRelatorioVenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mmVendasActionPerformed(evt);
+                miRelClienteActionPerformed(evt);
             }
         });
         toolBar.add(btRelatorioVenda);
@@ -124,18 +124,20 @@ public class ViewPrincipal extends javax.swing.JFrame {
 
         menuRelatorios.setText("Relatórios");
 
-        miRelVendasCliente.setText("Relatório por Cliente");
-        miRelVendasCliente.addActionListener(new java.awt.event.ActionListener() {
+        miRelCliente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, 0));
+        miRelCliente.setText("Relatório por Cliente");
+        miRelCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                miRelVendasClienteActionPerformed(evt);
+                miRelClienteActionPerformed(evt);
             }
         });
-        menuRelatorios.add(miRelVendasCliente);
+        menuRelatorios.add(miRelCliente);
 
         menuBar.add(menuRelatorios);
 
         menuFerramentas.setText("Ferramentas");
 
+        miBlocodeNotas.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F6, 0));
         miBlocodeNotas.setText("Bloco de Notas");
         miBlocodeNotas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,23 +189,18 @@ public class ViewPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_miSobreActionPerformed
 
     private void miSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miSairActionPerformed
-        int q = JOptionPane.showConfirmDialog(null, "Tem certeza que quer sair do sistema?", "Atenção",JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+        int q = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja sair do sistema?", "Atenção",JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
         if (q==JOptionPane.YES_OPTION){
             System.exit(0);
         }
     }//GEN-LAST:event_miSairActionPerformed
 
-    private void mmVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mmVendasActionPerformed
+    private void miRelClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miRelClienteActionPerformed
         // TODO add your handling code here:
-
-    }//GEN-LAST:event_mmVendasActionPerformed
-
-    private void miRelVendasClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miRelVendasClienteActionPerformed
-        // TODO add your handling code here:
-        ViewRelatorioCliente rvendac = new ViewRelatorioCliente();
-        desktopPane.add(rvendac);
-        rvendac.setVisible(true);
-    }//GEN-LAST:event_miRelVendasClienteActionPerformed
+        ViewRelatorioCliente rCliente = new ViewRelatorioCliente();
+        desktopPane.add(rCliente);
+        rCliente.setVisible(true);
+    }//GEN-LAST:event_miRelClienteActionPerformed
 
     private void miBlocodeNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miBlocodeNotasActionPerformed
         // TODO add your handling code here:
@@ -228,7 +225,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu menuSistema;
     private javax.swing.JMenuItem miBlocodeNotas;
     private javax.swing.JMenuItem miCliente;
-    private javax.swing.JMenuItem miRelVendasCliente;
+    private javax.swing.JMenuItem miRelCliente;
     private javax.swing.JMenuItem miSair;
     private javax.swing.JMenuItem miSobre;
     private javax.swing.JToolBar toolBar;

@@ -65,7 +65,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="AutoMais Oficina "/>
+        <Property name="text" type="java.lang.String" value="Martinello&apos;s Project"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
