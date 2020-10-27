@@ -1,4 +1,4 @@
-# CRUD Java com Maven, Hibernate e PostgresSQL
+# CRUD Java com Maven, Hibernate e PostgreSQL
 
 Esse é um projeto em que consiste em um CRUD completo com Cadastro de Clientes na linguagem Java SE (Desktop) utilizando a IDE Netbeans com o padrão de projetos Maven, o banco de dados utilizado é o Postgres e sua persistência se dá pelo framework Hibernate, além de conter relatórios do cadastro de Clientes armazenados no banco de dados.
 
