@@ -5,17 +5,17 @@ Esse é um projeto em que consiste em um CRUD completo com Cadastro de Clientes 
 A tecnologia aplicada no desenvolvimento foi através da linguagem de programação Java na JDK versão 8, IDE Netbeans 8.2, Maven, framework Hibernate 5.1.3, banco de dados Postgres versão 12 e relatório gerado através do jasperreport na IDE JasperSoft Studio versão 6.13.
 
 
-# Pré Requisitos
+## Pré Requisitos
 
 Os Pré Requisitos para rodar este projeto são:
 
-Java JDK 8 ou superior;
-PostgresSQL;
-Netbeans IDE 8.2 ou superior;
-Framework Hibernate.
+- Java JDK 8 ou superior;
+- PostgresSQL;
+- Netbeans IDE 8.2 ou superior;
+- Framework Hibernate.
 
 
-# Configurando o Projeto
+## Configurando o Projeto
 
 Para iniciarmos será necessário compilar o projeto no Netbeans (Build e Clean) para que as dependências sejam baixadas e instaladas através do arquivo **pom.xml**.
 
@@ -26,7 +26,7 @@ Localize o arquivo **hibernate.cfg.xml** que está na pasta **src/main/resources
 Com as configurações realizadas, o seu projeto está pronto para rodar.
 
 
-# Características do Projeto
+## Características do Projeto
 
 O projeto consiste em uma Tela Principal, onde há a opção de acesso a Tela de Cadastro de Clientes, nesta tela há algumas validações:
 
@@ -39,6 +39,6 @@ O campo Email contém validação, assim o email deverá ter pelo menos @, . e .
 O campo Telefone tem máscara para DDD e celular com 9 dígitos.
 
 
-# Iniciando
+## Iniciando
 
 O projeto contém a classe Principal que está no pacote com.lucas.projectmartinello, esta classe é responsável por executar o carregamento do JForm ViewPrincipal de nosso projeto.
