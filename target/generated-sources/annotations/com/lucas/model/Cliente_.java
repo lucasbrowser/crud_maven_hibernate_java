@@ -25,5 +25,21 @@ public abstract class Cliente_ {
 	public static volatile SingularAttribute<Cliente, String> email;
 	public static volatile SingularAttribute<Cliente, String> status;
 
+	public static final String TIPO = "tipo";
+	public static final String CIDADE = "cidade";
+	public static final String TELEFONE = "telefone";
+	public static final String ENDERECO = "endereco";
+	public static final String NUMERO = "numero";
+	public static final String BAIRRO = "bairro";
+	public static final String DATACADASTRO = "datacadastro";
+	public static final String NOME = "nome";
+	public static final String CPFCNPJ = "cpfcnpj";
+	public static final String CEP = "cep";
+	public static final String UF = "uf";
+	public static final String COMPLEMENTO = "complemento";
+	public static final String ID = "id";
+	public static final String EMAIL = "email";
+	public static final String STATUS = "status";
+
 }
 
